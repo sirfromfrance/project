@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form">
+            <form id="loginForm">
+                <label for="username">Ім'я:</label>
+                <input type="text" id="username" name="username"><br><br>
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password"><br><br>
+                
+                <input type="submit" value="Увійти" class="submit-button">
+            </form>
+        </div>
+    </div>
+    
+    
+      <div id="successMessage" style="display: none;">Форма успішно відправлена!</div>
+
+      <script>
+        const form = document.getElementById('loginForm');
+
+        
+        form.addEventListener('submit', function(event) {
+            
+            event.preventDefault();
+
+           
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+           
+            if (username.trim() !== '' && password.trim() !== '') {
+               
+                document.getElementById('successMessage').style.display = 'block';
+               alert('Вхід успішний')
+            } else {
+              
+                alert('Будь ласка, введіть ім\'я та пароль');
+            }
+        });
+      </script>
+</body>
+</html>
