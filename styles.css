@@ -168,3 +168,27 @@ h3 {
   font-weight: 500;
   color: #33c5af;
 }
+/* Десктопна версія */
+@media only screen and (min-width: 1024px) {
+}
+/* Планшетна версія */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+}
+/* Мобільна версія */
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 12px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .rectangle {
+    width: 200px;
+  }
+
+  .table table {
+    width: 100%;
+  }
+}
