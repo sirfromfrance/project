@@ -168,27 +168,86 @@ h3 {
   font-weight: 500;
   color: #33c5af;
 }
-/* Десктопна версія */
-@media only screen and (min-width: 1024px) {
-}
-/* Планшетна версія */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-}
-/* Мобільна версія */
-@media only screen and (max-width: 767px) {
+
+@media screen and (min-width: 1024px) {
   body {
+    font-size: 16px;
+  }
+
+  .rectangle {
+    width: 300px;
+  }
+
+  .container {
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  body {
+    font-size: 14px;
+    .basket,
+    .form-main,
+    .back,
+    .left-bottom {
+      font-size: 16px;
+    }
+
+    .rectangle {
+      width: 250px;
+    }
+
+    .container {
+      flex-direction: column;
+    }
+    .table-container {
+      width: 70%;
+    }
+  }
+}
+/* Для мобільної версії */
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 10px;
+  }
+  .basket {
+    position: absolute;
+    right: 8px;
+    top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .form-main {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .back {
+    position: absolute;
+    top: 5px;
+
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .payment-methods {
     font-size: 12px;
+  }
+  .rectangle {
+    width: 100%;
+    margin-bottom: 20px;
   }
 
   .container {
     flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  .rectangle {
-    width: 200px;
-  }
-
-  .table table {
+  .table-container {
     width: 100%;
+    flex-direction: column;
+    align-items: center;
   }
 }
