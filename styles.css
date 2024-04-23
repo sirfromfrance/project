@@ -173,7 +173,12 @@ h3 {
   body {
     font-size: 16px;
   }
-
+  .basket,
+  .form-main,
+  .back,
+  .left-bottom {
+    font-size: 18px;
+  }
   .rectangle {
     width: 300px;
   }
