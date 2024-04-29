@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Дитяче взуття</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="logo.jpg" type="image/x-icon" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .shoe {
+        width: calc(33.33% - 20px);
+        margin-bottom: 20px;
+        position: relative;
+      }
+      .shoe img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .shoe-info {
+        display: none;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+        width: 200px;
+      }
+
+      .shoe:hover .shoe-info {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="rectangle-top">
+        <div class="container">
+          <div class="header">
+            <h1>StrideStyle</h1>
+          </div>
+        </div>
+        <div class="header">
+          <nav>
+            <ul>
+              <div class="basket">
+                <li><a href="#">Кошик</a></li>
+              </div>
+              <div class="form-main">
+                <li><a href="form.html">Увійти</a></li>
+              </div>
+              <div class="back">
+                <li><a href="index.html">Повернутися на головну </a></li>
+              </div>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="shoe">
+          <img src="shoes/converseChild.webp" alt="Дитяче взуття 1" />
+          <div class="shoe-info">
+            <h4>Розмір:32 33 35</h4>
+          </div>
+          <h4>Ціна: 4320</h4>
+        </div>
+        <div class="shoe">
+          <img src="shoes/childOutdoor.webp" alt="Дитяче взуття 2" />
+          <div class="shoe-info">
+            <h4>Розмір: 31.5 33 34 34.5</h4>
+          </div>
+          <h4>Ціна: 3100</h4>
+        </div>
+        <div class="shoe">
+          <img src="shoes/tapochkiChild.webp" alt="Дитяче взуття 3" />
+          <div class="shoe-info">
+            <h4>Розміри: 31 31.5 32 33.5 34</h4>
+          </div>
+          <h4>Ціна: 3467</h4>
+        </div>
+        <div class="shoe">
+          <img src="shoes/tapkiChild.webp" alt=" Дитяче взуття 4" />
+          <div class="shoe-info">
+            <h4>Розміри: 33 34 35 36</h4>
+          </div>
+          <h4>Ціна: 2890</h4>
+        </div>
+        <div class="shoe">
+          <img src="shoes/bootsChild.webp" alt="Дитяче взуття 5" />
+          <div class="shoe-info">
+            <h4>Розміри: 33 33.5 34 35</h4>
+          </div>
+          <h4>Ціна: 2800</h4>
+        </div>
+        <div class="shoe">
+          <img src="shoes/childVans.webp" alt="Дитяче взуття 6" />
+          <div class="shoe-info">
+            <h4>Розміри: 30 31 32 33 34</h4>
+          </div>
+          <h4>Ціна: 2300</h4>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="bottom-rectangle">
+        <div class="left-bottom">
+          <a href="exchange.html">Обмін та повернення</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
