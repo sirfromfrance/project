@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Шкіряні кросівки adidas Originals Sambae </title>
+    <link rel="stylesheet" href="styles.css" />
+  
+    <link rel="icon" href="logo.jpg" type="image/x-icon" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 10px;
+        display: flex;
+      }
+
+      .main-image {
+      
+        max-width: 400px;
+        height: auto;
+      }
+
+      .shoe-details {
+        flex: 1;
+        padding:0;
+        padding-left: 100px;
+        padding-bottom: 280px;
+      }
+
+      
+
+      .add-to-cart {
+        background-color: #000;
+        color: #fff;
+        padding: 10px 40px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .add-to-cart:hover {
+        background-color: #333;
+      }
+      .size{
+        padding:0px;
+        padding-top: 10px;
+      }
+      .size select {
+  width: 150px; 
+  padding: 8px; 
+  font-size: 16px;
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  background-color: #fff; 
+  color: #333; 
+  cursor: pointer; 
+  transition: border-color 0.3s ease; 
+}
+
+.size select:hover {
+  border-color: #403d3d; 
+}
+.slideshow {
+    position: relative;
+    max-width: 300px; 
+    margin: auto;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+.slideshow img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.slideshow img.active {
+    display: block;
+}
+
+    </style>
+      <script src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="rectangle-top">
+        <div class="container">
+          <div class="header">
+            <h1>StrideStyle</h1>
+          </div>
+        </div>
+        <div class="header">
+          <nav>
+            <ul>
+              <div class="basket">
+                <li><a href="#">Кошик</a></li>
+              </div>
+              <div class="form-main">
+                <li><a href="form.html">Увійти</a></li>
+              </div>
+              <div class="back">
+                <li><a href="index.html">Повернутися на головну </a></li>
+              </div>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="shoe-image" style="margin-bottom: 100px;">
+              <img src="shoes/blackWoman.webp" alt="Взуття" style="max-width: 400px; height: auto;"/>
+            </div>
+            <div class="shoe-details">
+              <h2>Шкіряні кросівки adidas Originals Sambae </h2>
+              <h4> 4500 ГРН</h4>
+              <p class="size">Розмір:
+                <select name="size">
+                  <option value="35">35</option>
+                  <option value="36">36</option>
+                  <option value="37">37</option>
+                  <option value="38">38</option>
+                  <option value="40">40</option>
+                </select>
+              </p>
+              <p>
+                <h2>Кросівки adidas Originals Samba </h2>
+                <p>Кросівки з колекції adidas Originals виготовлені із поєднання натуральної шкіри та замші. Модель з гумовою зовнішньою підошвою, яка є міцною та стійкою до пошкоджень.</p>
+                <ul>
+                  <li> Круглий, трохи ущільнений носок</h4>  </li> 
+                  <li> Жорстка п'ятка стабілізує каблук і утримує ногу у взутті, щоб вона не вислизала під час руху. </li>
+                  <li>  Текстильна устілка, що виймається. </li>
+                  <li> Класична шнурівка забезпечує індивідуальне регулювання стопи.</li>
+                  <li>Плоскі шнурки зменшують тиск на стопу, забезпечуючи хорошу посадку та комфорт під час носіння.</li>
+                  <li>Модель на платформі.</h4> </li>
+                </ul>
+              </p>
+              <button class="add-to-cart">Додати у кошик</button>
+            </div>
+          </div>
+          
+      <h2 class="container">Вам може сподобатися:</h2>
+      <div class="slideshow">
+        <img class="active" src="shoes/womanBots.webp" alt="Image 1">
+        <img src="shoes/womenAdidas.webp" alt="Image 2">
+        <img src="shoes/homeShoesWoman.webp" alt="Image 3">
+        <img src="shoes/kabluchoWoman.webp" alt="4" />
+        <img src="shoes/womanKabluk.webp" alt="5"/>
+      </div>
+    </main>
+  </body>
+  
+  <footer>
+    <div class="bottom-rectangle">
+      <div class="left-bottom">
+        <a href="exchange.html">Обмін та повернення</a>
+      </div>
+    </div>
+  </footer>
+</html>

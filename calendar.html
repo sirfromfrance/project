@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Календар</title>
+    <style>
+      .calendar {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        border: 1px solid #ccc;
+        max-width: 300px;
+        padding: 10px;
+        border-radius: 20px;
+        background-color: rgb(250, 193, 227);
+      }
+      .calendar .header {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .calendar .month-year {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-weight: bold;
+      }
+      .calendar .days {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 5px;
+      }
+      .calendar .day {
+        text-align: center;
+        cursor: pointer;
+        padding: 5px;
+        border: 1px solid transparent;
+        transition: background-color 0.3s;
+      }
+
+      .calendar .selected {
+        background-color: #8f8f8f;
+        color: #fff;
+        border-radius: 10px;
+      }
+      .close {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        padding: 10;
+        border-radius: 8px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-left: 100px;
+        background-color: rgb(255, 192, 192);
+      }
+      .move {
+        border-radius: 5px;
+        background-color: rgb(255, 227, 242);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calendar">
+      <div class="header">
+        <button id="prevBtn" class="move">&lt;</button>
+        <span class="month-year" id="monthYear"></span>
+        <button id="nextBtn" class="move">&gt;</button>
+      </div>
+      <div class="days" id="days"></div>
+      <button id="cancelBtn" class="close">Відміна</button>
+    </div>
+
+    <script>
+      const currentDate = new Date();
+      let selectedDate = null;
+
+      function renderCalendar(date) {
+        const monthYear = document.getElementById("monthYear");
+        const daysContainer = document.getElementById("days");
+        const daysInMonth = new Date(
+          date.getFullYear(),
+          date.getMonth() + 1,
+          0
+        ).getDate();
+        const firstDayOfMonth = new Date(
+          date.getFullYear(),
+          date.getMonth(),
+          1
+        ).getDay();
+
+        monthYear.textContent = `${date.toLocaleString("uk-UA", {
+          month: "long",
+        })} ${date.getFullYear()}`;
+
+        daysContainer.innerHTML = "";
+
+        for (let i = 0; i < firstDayOfMonth; i++) {
+          const emptyDay = document.createElement("div");
+          emptyDay.classList.add("day", "empty");
+          daysContainer.appendChild(emptyDay);
+        }
+
+        for (let i = 1; i <= daysInMonth; i++) {
+          const day = document.createElement("div");
+          day.textContent = i;
+          day.classList.add("day");
+          if (
+            selectedDate &&
+            date.getFullYear() === selectedDate.getFullYear() &&
+            date.getMonth() === selectedDate.getMonth() &&
+            i === selectedDate.getDate()
+          ) {
+            day.classList.add("selected");
+          }
+          day.addEventListener("click", () => {
+            selectedDate = new Date(date.getFullYear(), date.getMonth(), i);
+            document
+              .querySelectorAll(".day")
+              .forEach((day) => day.classList.remove("selected"));
+            day.classList.add("selected");
+          });
+          daysContainer.appendChild(day);
+        }
+      }
+
+      document.getElementById("prevBtn").addEventListener("click", () => {
+        currentDate.setMonth(currentDate.getMonth() - 1);
+        renderCalendar(currentDate);
+      });
+
+      document.getElementById("nextBtn").addEventListener("click", () => {
+        currentDate.setMonth(currentDate.getMonth() + 1);
+        renderCalendar(currentDate);
+      });
+
+      document.getElementById("cancelBtn").addEventListener("click", () => {
+        document
+          .querySelectorAll(".day")
+          .forEach((day) => day.classList.remove("selected"));
+        selectedDate = null;
+        renderCalendar(currentDate);
+      });
+
+      renderCalendar(currentDate);
+    </script>
+  </body>
+</html>
