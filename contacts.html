@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Наші контакти</title>
+  </head>
+  <body>
+    <button class="show-modal" data-platform="instagram">Ми в інстаграм</button>
+    <button class="show-modal" data-platform="pinterest">Ми в пінтерест</button>
+    <button class="show-modal" data-platform="telegram">Ми в телеграм</button>
+
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1 id="modal-title">Instagram</h1>
+      <p id="modal-content">Посилання на наш інстаграм:</p>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
